@@ -12,13 +12,9 @@ const children = data.data.children;
 const randomPost = children[Math.floor(Math.random() * children.length)];
 const link = `https://reddit.com${randomPost.data.permalink}`
 
-
-if(argv.print){
-    console.log(`
-    Title: ${randomPost.data.title}\n
-    Link: ${link}
-    `)
-}
-else{
-    open(link);
-}
+console.log(`
+Title: ${randomPost.data.title}\n
+Link: ${link}
+`);  
+    
+open(link);
